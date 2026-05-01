@@ -1,0 +1,6 @@
+{
+    "model": "qwen:4b",
+    "raw_output": "Here is the structured data extracted from the provided OCR prescription text:\n\n```json\n{\n    \"name\": \"HOUMA MOHAMED\",\n    \"first_name\": \"LAICHE\",\n    \"date_of_birth\": \"2026-02-26\",\n    \"age\": 1,\n    \"medication\": [\n        {\n            \"name\": \"VOLTARENE EMULGEL 0,01 T/50G\",\n            \"dosage\": \"0,01 T/50G\",\n            \"posologie\": \"0,01 T/50G\",\n            \"qsp\": \"03 Btes\"\n        }\n    ]\n}\n```",
+    "latency_sec": 15.798839807510376,
+    "error": "JSON parse error: Expecting value: line 1 column 1 (char 0)"
+}

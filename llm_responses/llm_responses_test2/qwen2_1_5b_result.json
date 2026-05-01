@@ -1,0 +1,53 @@
+{
+    "medical_facility": {
+        "raw_text": "REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE MINISTERE DE LA SANTE",
+        "structured": {
+            "name": "REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE MINISTERE DE LA SANTE"
+        }
+    },
+    "patient": {
+        "raw_text": "HOUMA MOHAMED LAICHE 26/02/2026",
+        "structured": {
+            "full_name": "HOUMA MOHAMED LAICHE",
+            "first_name": "LAICHE",
+            "family_name": "MOHAMED"
+        }
+    },
+    "prescription_date": null,
+    "doctor": {
+        "raw_text": "DrF.AHMARI Medaci Gen\u00e9raliste",
+        "structured": {
+            "name": "DrF.AHMARI",
+            "specialty": "Medaci Gen\u00e9raliste",
+            "license_number": null
+        }
+    },
+    "medications": [
+        {
+            "raw_text": "VOLTARENE EMULGEL 0,01 T/50G",
+            "structured": {
+                "name": "VOLTARENE EMULGEL",
+                "dosage": "0,01 T/50G",
+                "form": null,
+                "posologie": null
+            }
+        },
+        {
+            "raw_text": "VIT D3 200 000UI/1ML B/01 AMP",
+            "structured": {
+                "name": "VIT D3",
+                "dosage": "200 000UI/1ML",
+                "form": null,
+                "posologie": null
+            }
+        },
+        {
+            "raw_text": "CALPEROS CP",
+            "structured": {
+                "name": "CALPEROS",
+                "posologie": "1 CPX2/JOUR",
+                "QSP": "02 Btes"
+            }
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "model": "qwen:0.5b",
+    "raw_output": "The medical prescription text provided is missing a key information: the date of birth for the patient. If this information is missing, it could affect the accuracy and completeness of the medical prescription text.",
+    "latency_sec": 4.410228490829468,
+    "error": "JSON parse error: Expecting value: line 1 column 1 (char 0)"
+}

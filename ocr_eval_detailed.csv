@@ -1,0 +1,9 @@
+model,example_id,latency_s,JSON Validity,Schema Compliance,Entity Accuracy
+gemma3:12b,ordo1,47.03,1.0,0.4286,0.9688
+qwen3:14b,ordo1,275.45,1.0,0.4286,0.9688
+deepseek-r1:14b,ordo1,159.71,1.0,0.4286,0.9688
+phi4-mini:3.8b,ordo1,93.14,1.0,0.4286,0.9688
+phi4:14b,ordo1,130.77,1.0,0.4286,0.9688
+qwen3:1.7b,ordo1,27.5,1.0,0.4286,0.9688
+qwen3:4b,ordo1,176.11,1.0,0.4286,0.832
+qwen3:8b,ordo1,101.42,1.0,0.4286,0.9688

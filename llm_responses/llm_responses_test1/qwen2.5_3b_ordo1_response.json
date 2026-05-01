@@ -1,0 +1,65 @@
+{
+    "raw_output": "{\n  \"medical_facility\": {\n    \"raw_text\": \"REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE MINISTERE DE LA SANTE Etablissement Public de Sant\u00e9 de PROXIMITE DE B.E.O (Cdt MIRA)\",\n    \"structured\": {\n      \"name\": null,\n      \"type\": \"hospital\"\n    }\n  },\n\n  \"patient\": {\n    \"raw_text\": \"Nom : HOUMA MOHAMED Pr\u00e9nom : LAICHE\",\n    \"structured\": {\n      \"full_name\": \"HOUMA LAICHE\",\n      \"first_name\": \"HOUMA\",\n      \"family_name\": \"LAICHE\"\n    },\n    \"date_of_birth\": null,\n    \"age\": 2026\n  },\n\n  \"prescription_date\": \"2026-02-26\",\n\n  \"doctor\": {\n    \"raw_text\": \"DrF.AHMARI\",\n    \"structured\": {\n      \"name\": \"DrF.AHMARI\",\n      \"specialty\": null,\n      \"license_number\": null\n    }\n  },\n\n  \"medications\": [\n    {\n      \"raw_text\": \"1 ) VOLTARENE EMULGEL 0,01 T/50G QSP 03 Btes APPLICATION X 3 / JOUR\",\n      \"structured\": {\n        \"name\": \"VOLTARENE EMULGEL\",\n        \"dosage\": null,\n        \"form\": \"EMULGEL\",\n        \"posologie\": \"X 3 / JOUR\",\n        \"QSP\": \"03 Btes\"\n      }\n    },\n    {\n      \"raw_text\": \"2 ) VIT D3 200 000UI/1ML B/01 AMP QSP 03 Btes AMPOULE /MOIS\",\n      \"structured\": {\n        \"name\": \"VIT D3\",\n        \"dosage\": null,\n        \"form\": \"AMPOULE\",\n        \"posologie\": \"AMPOULE /MOIS\",\n        \"QSP\": \"03 Btes\"\n      }\n    },\n    {\n      \"raw_text\": \"3 ) CALPEROS CP QSP 02 Btes CPX2/JOUR\",\n      \"structured\": {\n        \"name\": \"CALPEROS\",\n        \"dosage\": null,\n        \"form\": \"CP\",\n        \"posologie\": \"CPX2/JOUR\",\n        \"QSP\": \"02 Btes\"\n      }\n    }\n  ]\n}",
+    "parsed_json": {
+        "medical_facility": {
+            "raw_text": "REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE MINISTERE DE LA SANTE Etablissement Public de Sant\u00e9 de PROXIMITE DE B.E.O (Cdt MIRA)",
+            "structured": {
+                "name": null,
+                "type": "hospital"
+            }
+        },
+        "patient": {
+            "raw_text": "Nom : HOUMA MOHAMED Pr\u00e9nom : LAICHE",
+            "structured": {
+                "full_name": "HOUMA LAICHE",
+                "first_name": "HOUMA",
+                "family_name": "LAICHE"
+            },
+            "date_of_birth": null,
+            "age": 2026
+        },
+        "prescription_date": "2026-02-26",
+        "doctor": {
+            "raw_text": "DrF.AHMARI",
+            "structured": {
+                "name": "DrF.AHMARI",
+                "specialty": null,
+                "license_number": null
+            }
+        },
+        "medications": [
+            {
+                "raw_text": "1 ) VOLTARENE EMULGEL 0,01 T/50G QSP 03 Btes APPLICATION X 3 / JOUR",
+                "structured": {
+                    "name": "VOLTARENE EMULGEL",
+                    "dosage": null,
+                    "form": "EMULGEL",
+                    "posologie": "X 3 / JOUR",
+                    "QSP": "03 Btes"
+                }
+            },
+            {
+                "raw_text": "2 ) VIT D3 200 000UI/1ML B/01 AMP QSP 03 Btes AMPOULE /MOIS",
+                "structured": {
+                    "name": "VIT D3",
+                    "dosage": null,
+                    "form": "AMPOULE",
+                    "posologie": "AMPOULE /MOIS",
+                    "QSP": "03 Btes"
+                }
+            },
+            {
+                "raw_text": "3 ) CALPEROS CP QSP 02 Btes CPX2/JOUR",
+                "structured": {
+                    "name": "CALPEROS",
+                    "dosage": null,
+                    "form": "CP",
+                    "posologie": "CPX2/JOUR",
+                    "QSP": "02 Btes"
+                }
+            }
+        ]
+    },
+    "latency_sec": 48.01237750053406,
+    "error": null
+}

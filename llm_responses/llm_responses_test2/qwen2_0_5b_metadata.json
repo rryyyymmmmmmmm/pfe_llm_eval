@@ -1,0 +1,6 @@
+{
+    "model": "qwen2:0.5b",
+    "raw_output": "{\n  \"medications\": [\n    {\n      \"name\": \"Vit D3\",\n      \"dosage\": \"200 000UI/1ML B/01 AMP\",\n      \"posologie\": \"3 cp par jour\",\n      \"QSP: 03 Btes\"\n    },\n    {\n      \"name\": \"Caliperos CP\",\n      \"dosage\": \"CPX2/JOUR\",\n      \"posologie\": \"1 CPX2/JOUR\",\n      \"QSP: 02 Btes\"\n    }\n  ]\n}",
+    "latency_sec": 5.430237293243408,
+    "error": "JSON parse error: Expecting ':' delimiter: line 8 column 5 (char 154)"
+}

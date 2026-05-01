@@ -1,0 +1,192 @@
+import json
+
+# ─────────────────────────────────────────────────────────────
+# EXAMPLES  — raw OCR text + expected JSON ground truth
+# Simulate realistic OCR noise (typos, garbled chars, odd spacing)
+# ─────────────────────────────────────────────────────────────
+
+EXAMPLES = [
+    # ── Example 1: Clean prescription ──────────────────────────
+    {
+        "id": "ex_001",
+        "description": "Clean prescription, single medication",
+        "ocr_text": """
+Dr. Sarah Johnson, MD - Cardiology
+License: CA-98234
+Date: 03/15/2024
+
+Patient: James Carter   DOB: 1978-06-22   ID: PT-44521
+
+Rx:
+Lisinopril 10mg tablets
+Take 1 tablet by mouth once daily
+Qty: 30 tablets  |  Refills: 3
+
+Diagnosis: Hypertension (I10)
+""",
+        "ground_truth": {
+            "patient": {"name": "James Carter", "date_of_birth": "1978-06-22", "id": "PT-44521"},
+            "prescription_date": "2024-03-15",
+            "doctor": {"name": "Sarah Johnson", "specialty": "Cardiology", "license_number": "CA-98234"},
+            "medications": [
+                {"name": "Lisinopril", "dosage": "10mg", "form": "tablets",
+                 "frequency": "once daily", "duration": None, "quantity": "30 tablets"}
+            ],
+            "diagnoses": ["Hypertension"],
+            "refills": 3,
+            "notes": None
+        }
+    },
+
+    # ── Example 2: Noisy OCR, multiple medications ──────────────
+    {
+        "id": "ex_002",
+        "description": "Noisy OCR, two medications",
+        "ocr_text": """
+C1inic Med icale du Centre
+Dr. Ahmed B0uaza  Specialite: Med.Generale  Lic# MG-00712
+
+Date: 22 jan 2O24  [OCR: O=zero confusion]
+
+Patient: Fatima Zah ra Bensalem   N-SS: FZB-8801
+Nee le: 05/11/1990
+
+ORDONNANCE:
+1) Amoxici1line 500 mg gelules
+   3 fois/jour pendant 7 jours
+   Qte: 21 gelules
+
+2) lbuprof ene 400mg comprime
+   2 fois par jour si douleur
+   Qte: 14 comp  Renouvellement: 0
+
+Diagnostic: Angine bacterienne
+Note: Eviter alcool pendant le traitement
+""",
+        "ground_truth": {
+            "patient": {"name": "Fatima Zahra Bensalem", "date_of_birth": "1990-11-05", "id": "FZB-8801"},
+            "prescription_date": "2024-01-22",
+            "doctor": {"name": "Ahmed Bouaza", "specialty": "Médecine Générale", "license_number": "MG-00712"},
+            "medications": [
+                {"name": "Amoxicilline", "dosage": "500mg", "form": "gélules",
+                 "frequency": "3 fois/jour", "duration": "7 jours", "quantity": "21"},
+                {"name": "Ibuprofène", "dosage": "400mg", "form": "comprimé",
+                 "frequency": "2 fois/jour", "duration": None, "quantity": "14"}
+            ],
+            "diagnoses": ["Angine bactérienne"],
+            "refills": 0,
+            "notes": "Eviter alcool pendant le traitement"
+        }
+    },
+
+    # ── Example 3: Heavily garbled OCR ─────────────────────────
+    {
+        "id": "ex_003",
+        "description": "Heavily garbled OCR, missing fields",
+        "ocr_text": """
+D r . M i k e  T h o m p s o n   Pedi4trics
+D@te: Sept 5 2023
+
+Pat: Emily R0se Nguyen  DOB 2O15-O3-12
+
+Rx1: Amox!cil!in  250 m9  susp3nsion
+give 5ml tw!ce da!ly f0r 10 days
+
+Rx2: C3tiriz!ne 5mg syr0p
+1 teasp0on at bedtime
+30 days supply
+
+Dx: Ot!tis media, A11ergic rhin!tis
+Ref!ls: 1
+""",
+        "ground_truth": {
+            "patient": {"name": "Emily Rose Nguyen", "date_of_birth": "2015-03-12", "id": None},
+            "prescription_date": "2023-09-05",
+            "doctor": {"name": "Mike Thompson", "specialty": "Pediatrics", "license_number": None},
+            "medications": [
+                {"name": "Amoxicillin", "dosage": "250mg", "form": "suspension",
+                 "frequency": "twice daily", "duration": "10 days", "quantity": None},
+                {"name": "Cetirizine", "dosage": "5mg", "form": "syrup",
+                 "frequency": "at bedtime", "duration": "30 days", "quantity": None}
+            ],
+            "diagnoses": ["Otitis media", "Allergic rhinitis"],
+            "refills": 1,
+            "notes": None
+        }
+    },
+
+    # ── Example 4: Minimal / sparse prescription ───────────────
+    {
+        "id": "ex_004",
+        "description": "Minimal info, one medication, no refills",
+        "ocr_text": """
+ORDONNANCE MEDICALE
+Date: 10-04-2024
+Médecin: Dr. Nadia Cherif
+
+Pour: M. Karim Hadj Ali
+
+- Metformine 850mg cp
+  1 cp matin et soir pendant 3 mois
+
+Diabète type 2
+""",
+        "ground_truth": {
+            "patient": {"name": "Karim Hadj Ali", "date_of_birth": None, "id": None},
+            "prescription_date": "2024-04-10",
+            "doctor": {"name": "Nadia Cherif", "specialty": None, "license_number": None},
+            "medications": [
+                {"name": "Metformine", "dosage": "850mg", "form": "comprimé",
+                 "frequency": "matin et soir", "duration": "3 mois", "quantity": None}
+            ],
+            "diagnoses": ["Diabète type 2"],
+            "refills": None,
+            "notes": None
+        }
+    },
+
+    # ── Example 5: Three medications, complex OCR ───────────────
+    {
+        "id": "ex_005",
+        "description": "Three medications, mixed noise",
+        "ocr_text": """
+Westside Medical Group
+Dr. Priya Sharma  |  Internal Medicine  |  Lic: TX-55309
+Date: January 18, 2024    Patient ID: WMG-2291
+
+Patient: Robert Klein   Born: 1965-09-30
+
+1. Atorvastatin 40 mg tablet
+   Once at bedtime  x  90 days  Qty: 90  Refill: 2
+
+2. Metop ro lol Succinate 50mg XL tab
+   1 tab QD  x  90 days  Qty: 90
+
+3. Aspirin 81 mg EC tab
+   1 tab daily with food  Qty: 90
+
+Dx: Hyperlipidemia, HTN, CAD (preventive)
+Note: F/U in 3 months with lipid panel
+""",
+        "ground_truth": {
+            "patient": {"name": "Robert Klein", "date_of_birth": "1965-09-30", "id": "WMG-2291"},
+            "prescription_date": "2024-01-18",
+            "doctor": {"name": "Priya Sharma", "specialty": "Internal Medicine", "license_number": "TX-55309"},
+            "medications": [
+                {"name": "Atorvastatin", "dosage": "40mg", "form": "tablet",
+                 "frequency": "once at bedtime", "duration": "90 days", "quantity": "90"},
+                {"name": "Metoprolol Succinate", "dosage": "50mg", "form": "tablet",
+                 "frequency": "once daily", "duration": "90 days", "quantity": "90"},
+                {"name": "Aspirin", "dosage": "81mg", "form": "tablet",
+                 "frequency": "daily with food", "duration": None, "quantity": "90"}
+            ],
+            "diagnoses": ["Hyperlipidemia", "Hypertension", "CAD"],
+            "refills": 2,
+            "notes": "F/U in 3 months with lipid panel"
+        }
+    },
+]
+
+print(f"Loaded {len(EXAMPLES)} test examples.")
+for ex in EXAMPLES:
+    print(f"  [{ex['id']}] {ex['description']}")

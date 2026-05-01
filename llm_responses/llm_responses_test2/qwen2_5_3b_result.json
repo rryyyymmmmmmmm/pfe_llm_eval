@@ -1,0 +1,60 @@
+{
+    "medical_facility": {
+        "raw_text": "REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE MINISTERE DE LA SANTE Etablissement Public de Sant\u00e9 de PROXIMITE DE B.E.O (Cdt MIRA)",
+        "structured": {
+            "name": null,
+            "type": "hospital"
+        }
+    },
+    "patient": {
+        "raw_text": "Nom : HOUMA MOHAMED Pr\u00e9nom : LAICHE",
+        "structured": {
+            "full_name": "HOUMA LAICHE",
+            "first_name": "HOUMA",
+            "family_name": "LAICHE"
+        },
+        "date_of_birth": null,
+        "age": 2026
+    },
+    "prescription_date": "2026-02-26",
+    "doctor": {
+        "raw_text": "DrF.AHMARI",
+        "structured": {
+            "name": "DrF.AHMARI",
+            "specialty": null,
+            "license_number": null
+        }
+    },
+    "medications": [
+        {
+            "raw_text": "1 ) VOLTARENE EMULGEL 0,01 T/50G QSP 03 Btes APPLICATION X 3 / JOUR",
+            "structured": {
+                "name": "VOLTARENE EMULGEL",
+                "dosage": null,
+                "form": "EMULGEL",
+                "posologie": "X 3 / JOUR",
+                "QSP": "03 Btes"
+            }
+        },
+        {
+            "raw_text": "2 ) VIT D3 200 000UI/1ML B/01 AMP QSP 03 Btes AMPOULE /MOIS",
+            "structured": {
+                "name": "VIT D3",
+                "dosage": null,
+                "form": "AMPOULE",
+                "posologie": "AMPOULE /MOIS",
+                "QSP": "03 Btes"
+            }
+        },
+        {
+            "raw_text": "3 ) CALPEROS CP QSP 02 Btes CPX2/JOUR",
+            "structured": {
+                "name": "CALPEROS",
+                "dosage": null,
+                "form": "CP",
+                "posologie": "CPX2/JOUR",
+                "QSP": "02 Btes"
+            }
+        }
+    ]
+}

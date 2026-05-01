@@ -1,0 +1,6 @@
+{
+    "raw_output": "The medical prescription text you provided is missing a key information: the date of birth for the patient. Without this information, it's impossible to determine the patient's name and date of birth.",
+    "parsed_json": null,
+    "latency_sec": 0.5265035629272461,
+    "error": "JSON parse error: Expecting value: line 1 column 1 (char 0)"
+}

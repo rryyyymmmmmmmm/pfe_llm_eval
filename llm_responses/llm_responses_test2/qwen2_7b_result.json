@@ -1,0 +1,58 @@
+{
+    "medical_facility": {
+        "raw_text": "ETABLISSEMENT PUBLIC DE SANTE DE",
+        "structured": {
+            "name": "ETABLISSEMENT PUBLIC DE SANTE DE",
+            "type": null
+        }
+    },
+    "patient": {
+        "raw_text": "Nom : HOUMA MOHAMED\nPr\u00e9nom : LAICHE",
+        "structured": {
+            "full_name": "HOUMA MOHAMED LAICHE",
+            "first_name": "LAICHE",
+            "family_name": "HOUMA"
+        }
+    },
+    "prescription_date": "26/02/2026",
+    "doctor": {
+        "raw_text": "DrF.AHMARI\nMedaci Gen\u00e9raliste",
+        "structured": {
+            "name": "DrF.AHMARI",
+            "specialty": "Medaci Gen\u00e9raliste",
+            "license_number": null
+        }
+    },
+    "medications": [
+        {
+            "raw_text": "VOLTARENE EMULGEL 0,01 T/50G\nQSP 03 Btes\n1 APPLICATION X 3 / JOUR",
+            "structured": {
+                "name": "VOLTARENE EMULGEL",
+                "dosage": null,
+                "form": "0,01 T/50G",
+                "posologie": "1 APPLICATION X 3 / JOUR",
+                "QSP": "03 Btes"
+            }
+        },
+        {
+            "raw_text": "VIT D3 200 000UI/1ML B/01 AMP\nQSP 03 Btes\n1 AMPOULE /MOIS",
+            "structured": {
+                "name": "VIT D3",
+                "dosage": "200 000UI/1ML",
+                "form": null,
+                "posologie": "1 AMPOULE /MOIS",
+                "QSP": "03 Btes"
+            }
+        },
+        {
+            "raw_text": "CALPEROS CP\nQSP 02 Btes\n1 CPX2/JOUR",
+            "structured": {
+                "name": "CALPEROS CP",
+                "dosage": null,
+                "form": null,
+                "posologie": "1 CPX2/JOUR",
+                "QSP": "02 Btes"
+            }
+        }
+    ]
+}
