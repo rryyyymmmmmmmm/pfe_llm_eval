@@ -1,0 +1,66 @@
+{
+    "medical_facility": {
+        "raw_text": "ETABLISSEMENT PUBLIC DE SANTE DE PROXIMITE DE B.E.O (Cdt MIRA)",
+        "structured": {
+            "name": "Etablissement Public de Sante de Proximite de Bab El Oued (Cdt MIRA)",
+            "type": "établissement public de santé de proximité (EPSP)"
+        }
+    },
+    "patient": {
+        "raw_text": "Nom : HOUMA MOHAMED Prénom : LAICHE Date naissance : 0000-00-00 (2026 ans)",
+        "structured": {
+            "full_name": "HOUMA MOHAMED",
+            "first_name": "MOHAMED",
+            "family_name": "HOUMA",
+            "date_of_birth": null,
+            "age": null
+        }
+    },
+    "prescription_date": "2026-02-26",
+    "doctor": {
+        "raw_text": "Dr F. AHMARI Médecin Généraliste",
+        "structured": {
+            "name": "Dr F. Ahmari",
+            "specialty": "Généraliste",
+            "license_number": null
+        }
+    },
+    "medications": [
+        {
+            "raw_text": "VOLTARENE EMULGEL 0,01 T/50G 1 APPLICATION X 3 / JOUR QSP 03 Btes",
+            "structured": {
+                "name": "Voltarene Emulgel",
+                "dosage": "0.01 T/50g",
+                "form": "gel",
+                "posologie": "1 application 3 fois par jour",
+                "QSP": "3 boites",
+                "total_quantity": null,
+                "package_quantity": 3
+            }
+        },
+        {
+            "raw_text": "VIT D3 200 000UI/1ML B/01 AMP 1 AMPOULE / MOIS QSP 03 Btes",
+            "structured": {
+                "name": "Vit D3",
+                "dosage": "200000UI/1ml",
+                "form": "ampoule",
+                "posologie": "1 ampoule par mois",
+                "QSP": "3 boites",
+                "total_quantity": null,
+                "package_quantity": 3
+            }
+        },
+        {
+            "raw_text": "CALPEROS CP 1 CP X 2 / JOUR QSP 02 Btes",
+            "structured": {
+                "name": "Calperos",
+                "dosage": null,
+                "form": "comprimé",
+                "posologie": "1 cp 2 fois par jour",
+                "QSP": "2 boites",
+                "total_quantity": null,
+                "package_quantity": 2
+            }
+        }
+    ]
+}
