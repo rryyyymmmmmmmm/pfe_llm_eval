@@ -1,0 +1,130 @@
+{
+    "id": "ordo7",
+    "ocr_text": "",
+    "ground_truth": {
+        "medical_facility": {
+            "raw_text": "CABINET MEDICAL SPECIALISE EN CARDIOLOGIE",
+            "structured": {
+                "name": "Cabinet médical spécialisé en cardiologie",
+                "type": "Cabinet"
+            }
+        },
+        "patient": {
+            "raw_text": "Nom:DJEHICHE Prénom:Hania Age: 49 ans",
+            "structured": {
+                "full_name": "DJEHICHE Hania",
+                "first_name": "Hania",
+                "family_name": "DJEHICHE",
+                "date_of_birth": null,
+                "age": 49
+            }
+        },
+        "prescription_date": null,
+        "doctor": {
+            "raw_text": "Dr C.KRELIFA Médecin spécialiste en Cardiologie",
+            "structured": {
+                "name": "Dr C. Krelifa",
+                "specialty": "Cardiologie",
+                "license_number": "16/715"
+            }
+        },
+        "medications": [
+            {
+                "raw_text": "TRIATEC 2,5MG 1 comprimé(s), par jour(s) QSP 3 mois",
+                "structured": {
+                    "name": "Triatec",
+                    "dosage": "2.5mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 90,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "LASILIX 40MG 1 comprimé(s),2Xpar jour(s) QSP 3 mois",
+                "structured": {
+                    "name": "Lasilix",
+                    "dosage": "40mg",
+                    "form": "comprimé",
+                    "posologie": "2 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 180,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "LOMAC 20 20MG MG 1 gélule(s), par jour(s) 1 Boite(s)",
+                "structured": {
+                    "name": "Lomac",
+                    "dosage": "20mg",
+                    "form": "gélule",
+                    "posologie": "1 gélule par jour",
+                    "QSP": "1 boite",
+                    "total_quantity": null,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "DOLIPRANE 1000MG MG 1 comprimé(s), 2 fois par jour 2 Boite(s)",
+                "structured": {
+                    "name": "Doliprane",
+                    "dosage": "1000mg",
+                    "form": "comprimé",
+                    "posologie": "2 cp par jour",
+                    "QSP": "2 boites",
+                    "total_quantity": null,
+                    "package_quantity": 2
+                }
+            },
+            {
+                "raw_text": "CRESOVAST 40 1 comprimé(s), par jour(s) QSP 3 mois",
+                "structured": {
+                    "name": "Cresovast",
+                    "dosage": "40mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 90,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "ASPEC 100MG MG 1 comprimé(s), par jour(s) QSP 3 mois",
+                "structured": {
+                    "name": "Aspec",
+                    "dosage": "100mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 90,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "BIPROTENS 5 MG 1 comprimé(s), par jour(s) QSP 3 mois",
+                "structured": {
+                    "name": "Biprotens",
+                    "dosage": "5mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 90,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "METAZID 10 1 comprimé(s), par jour(s) QSP 3 mois",
+                "structured": {
+                    "name": "Metazid",
+                    "dosage": "10mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 90,
+                    "package_quantity": 1
+                }
+            }
+        ]
+    }
+}

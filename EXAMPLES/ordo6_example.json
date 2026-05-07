@@ -1,0 +1,70 @@
+{
+    "id": "ordo6",
+    "ocr_text": "",
+    "ground_truth": {
+        "medical_facility": {
+            "raw_text": null,
+            "structured": {
+                "name": null,
+                "type": null
+            }
+        },
+        "patient": {
+            "raw_text": "Nom et Prénom : NEGGAZI ZINEB Age : 81 ans et 10 mois",
+            "structured": {
+                "full_name": "NEGGAZI ZINEB",
+                "first_name": "ZINEB",
+                "family_name": "NEGGAZI",
+                "date_of_birth": null,
+                "age": 81
+            }
+        },
+        "prescription_date": "2026-03-01",
+        "doctor": {
+            "raw_text": "Dr MEGHERBI MAMOUNE Médecin Spécialiste Diabétologie - Endocrinologie",
+            "structured": {
+                "name": "Dr Megherbi Mamoune",
+                "specialty": "Diabétologie - Endocrinologie",
+                "license_number": null
+            }
+        },
+        "medications": [
+            {
+                "raw_text": "GLUCOPHAGE 850 mg 1 CP 2 X / JOUR QSP 3 MOIS",
+                "structured": {
+                    "name": "Glucophage",
+                    "dosage": "850mg",
+                    "form": "comprimé",
+                    "posologie": "2 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 180,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "BANDELETTES REACTIVES 1 TEST 1 JOUR / 2 01Bte",
+                "structured": {
+                    "name": "Bandelettes reactives",
+                    "dosage": null,
+                    "form": null,
+                    "posologie": "1 test tous les 2 jours",
+                    "QSP": null,
+                    "total_quantity": null,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "VITAMINE D3 200 000 UI 1 AMPOULE / MOIS",
+                "structured": {
+                    "name": "Vitamine D3",
+                    "dosage": "200000UI",
+                    "form": "ampoule",
+                    "posologie": "1 ampoule par mois",
+                    "QSP": null,
+                    "total_quantity": null,
+                    "package_quantity": 1
+                }
+            }
+        ]
+    }
+}

@@ -60,7 +60,7 @@ Rules:
 - The "structured" fields should contain the cleaned, inferred and structured information extracted from the raw text.
 
 - It is possible for the medical facility's name to be in Arabic, French, or a combination of both. For the structured fields, extract as much as possible.
-- The "structured" field for the medical facility will contain one of the possible medical facilities are : établissement public de santé de proximité (EPSP), polyclinique, salle de soin, établissement de maternité de proximité intégrée à une polyclinique, établissement hospitalo-universitaire (CHU), établissement hospitalier spécialisé (EHS). 
+- The "structured" field for the medical facility will contain one of the possible medical facilities are : clinique, établissement public de santé de proximité (EPSP), polyclinique, salle de soin, établissement de maternité de proximité intégrée à une polyclinique, établissement hospitalo-universitaire (CHU), établissement hospitalier spécialisé (EHS). 
 
 - For the patient's name, if possible, split into first name and family name. If not possible, put the full name in "full_name" and leave the others null.
 - For the patient's age, if only the date of birth is found, leave the age field null. If only the age is found, leave the date of birth field null. If both are found, fill both fields.
