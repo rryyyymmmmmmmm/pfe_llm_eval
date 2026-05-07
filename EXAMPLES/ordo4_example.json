@@ -1,66 +1,70 @@
 {
-    "medical_facility": {
-        "raw_text": "CABINET DE CARDIOLOGIE ET D'EXPLORATIONS CARDIO-VASCULAIRES",
-        "structured": {
-            "name": "Cabinet de cardiologie et d'explorations cardio-vasculaires",
-            "type": "Cabinet"
-        }
-    },
-    "patient": {
-        "raw_text": "Nom : HAMMOUM Prénom : Salah Age : 91 Ans",
-        "structured": {
-            "full_name": "HAMMOUM Salah",
-            "first_name": "Salah",
-            "family_name": "HAMMOUM",
-            "date_of_birth": null,
-            "age": 91
-        }
-    },
-    "prescription_date": "2026-03-05",
-    "doctor": {
-        "raw_text": "Dr. W. DAAOU Spécialiste en Cardiologie N° Conseil de l'ordre : 16/21690",
-        "structured": {
-            "name": "Dr W. Daaou",
-            "specialty": "Cardiologie",
-            "license_number": "16/21690"
-        }
-    },
-    "medications": [
-        {
-            "raw_text": "APROVASC COMP. 300MG/5MG 1 cp / j le matin 1 boite",
+    "id": "ordo4",
+    "ocr_text": "",
+    "ground_truth": {
+        "medical_facility": {
+            "raw_text": "CABINET DE CARDIOLOGIE ET D'EXPLORATIONS CARDIO-VASCULAIRES",
             "structured": {
-                "name": "Aprovasc",
-                "dosage": "300mg/5mg",
-                "form": "comprimé",
-                "posologie": "1 cp par jour le matin",
-                "QSP": null,
-                "total_quantity": null,
-                "package_quantity": 1
+                "name": "Cabinet de cardiologie et d'explorations cardio-vasculaires",
+                "type": "Cabinet"
             }
         },
-        {
-            "raw_text": "MOXONIDINE BEKER COMP. 0,2MG 1 cp / j le soir 1 boite",
+        "patient": {
+            "raw_text": "Nom : HAMMOUM Prénom : Salah Age : 91 Ans",
             "structured": {
-                "name": "Moxonidine Beker",
-                "dosage": "0.2mg",
-                "form": "comprimé",
-                "posologie": "1 cp par jour le soir",
-                "QSP": null,
-                "total_quantity": null,
-                "package_quantity": 1
+                "full_name": "HAMMOUM Salah",
+                "first_name": "Salah",
+                "family_name": "HAMMOUM",
+                "date_of_birth": null,
+                "age": 91
             }
         },
-        {
-            "raw_text": "NUTRIGEST VIT D3 capsules 1000ui 1 cp / j 3 mois",
+        "prescription_date": "2026-03-05",
+        "doctor": {
+            "raw_text": "Dr. W. DAAOU Spécialiste en Cardiologie N° Conseil de l'ordre : 16/21690",
             "structured": {
-                "name": "Nutrige st Vit D3",
-                "dosage": "1000UI",
-                "form": "capsule",
-                "posologie": "1 cp par jour",
-                "QSP": "3 mois",
-                "total_quantity": 90,
-                "package_quantity": 1
+                "name": "Dr W. Daaou",
+                "specialty": "Cardiologie",
+                "license_number": "16/21690"
             }
-        }
-    ]
+        },
+        "medications": [
+            {
+                "raw_text": "APROVASC COMP. 300MG/5MG 1 cp / j le matin 1 boite",
+                "structured": {
+                    "name": "Aprovasc",
+                    "dosage": "300mg/5mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour le matin",
+                    "QSP": null,
+                    "total_quantity": null,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "MOXONIDINE BEKER COMP. 0,2MG 1 cp / j le soir 1 boite",
+                "structured": {
+                    "name": "Moxonidine Beker",
+                    "dosage": "0.2mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour le soir",
+                    "QSP": null,
+                    "total_quantity": null,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "NUTRIGEST VIT D3 capsules 1000ui 1 cp / j 3 mois",
+                "structured": {
+                    "name": "Nutrige st Vit D3",
+                    "dosage": "1000UI",
+                    "form": "capsule",
+                    "posologie": "1 cp par jour",
+                    "QSP": "3 mois",
+                    "total_quantity": 90,
+                    "package_quantity": 1
+                }
+            }
+        ]
+    }
 }

@@ -1,54 +1,58 @@
 {
-    "medical_facility": {
-        "raw_text": "EPSP de Bab El Oued (Omar Merouane)",
-        "structured": {
-            "name": "EPSP de Bab El Oued Omar Merouane",
-            "type": "établissement public de santé de proximité (EPSP)"
-        }
-    },
-    "patient": {
-        "raw_text": "Nom : SAADI Prénom : MALAK Date naissance : 2008-07-16 (17 ans)",
-        "structured": {
-            "full_name": "SAADI MALAK",
-            "first_name": "MALAK",
-            "family_name": "SAADI",
-            "date_of_birth": "2008-07-16",
-            "age": 17
-        }
-    },
-    "prescription_date": "2026-03-02",
-    "doctor": {
-        "raw_text": "Dr BEKKOUCHE Médecin Généraliste",
-        "structured": {
-            "name": "Dr BEKKOUCHE",
-            "specialty": "Généraliste",
-            "license_number": null
-        }
-    },
-    "medications": [
-        {
-            "raw_text": "SOLUPRED ORO 20MG B/20 2 CP 1* par jour",
+    "id": "ordo3",
+    "ocr_text": "",
+    "ground_truth": {
+        "medical_facility": {
+            "raw_text": "EPSP de Bab El Oued (Omar Merouane)",
             "structured": {
-                "name": "Solupred Oro",
-                "dosage": "20mg",
-                "form": "comprimé",
-                "posologie": "2 cp par jour",
-                "QSP": null,
-                "total_quantity": null,
-                "package_quantity": 1
+                "name": "EPSP de Bab El Oued Omar Merouane",
+                "type": "établissement public de santé de proximité (EPSP)"
             }
         },
-        {
-            "raw_text": "ALLERTINE 10MG B/20 1 CP 1* par jour QSP 10 Jours",
+        "patient": {
+            "raw_text": "Nom : SAADI Prénom : MALAK Date naissance : 2008-07-16 (17 ans)",
             "structured": {
-                "name": "Allertine",
-                "dosage": "10mg",
-                "form": "comprimé",
-                "posologie": "1 cp par jour",
-                "QSP": "10 jours",
-                "total_quantity": 10,
-                "package_quantity": 1
+                "full_name": "SAADI MALAK",
+                "first_name": "MALAK",
+                "family_name": "SAADI",
+                "date_of_birth": "2008-07-16",
+                "age": 17
             }
-        }
-    ]
+        },
+        "prescription_date": "2026-03-02",
+        "doctor": {
+            "raw_text": "Dr BEKKOUCHE Médecin Généraliste",
+            "structured": {
+                "name": "Dr BEKKOUCHE",
+                "specialty": "Généraliste",
+                "license_number": null
+            }
+        },
+        "medications": [
+            {
+                "raw_text": "SOLUPRED ORO 20MG B/20 2 CP 1* par jour",
+                "structured": {
+                    "name": "Solupred Oro",
+                    "dosage": "20mg",
+                    "form": "comprimé",
+                    "posologie": "2 cp par jour",
+                    "QSP": null,
+                    "total_quantity": null,
+                    "package_quantity": 1
+                }
+            },
+            {
+                "raw_text": "ALLERTINE 10MG B/20 1 CP 1* par jour QSP 10 Jours",
+                "structured": {
+                    "name": "Allertine",
+                    "dosage": "10mg",
+                    "form": "comprimé",
+                    "posologie": "1 cp par jour",
+                    "QSP": "10 jours",
+                    "total_quantity": 10,
+                    "package_quantity": 1
+                }
+            }
+        ]
+    }
 }
